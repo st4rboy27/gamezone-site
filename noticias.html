@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="GameZone - As últimas notícias do mundo gamer">
+  <meta name="keywords" content="games, notícias, lançamentos, reviews">
+  <meta name="author" content="Mauricio Junior">
+  <title>GameZone - +Notícias</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body {
+      margin: 0;
+      background-color: #1e1e2f;
+      color: #fff;
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      background-color: #121222;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    }
+
+    header h1 {
+      margin: 0;
+      color: #fff;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 15px 0 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav ul li a.active, nav ul li a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .noticia {
+      display: flex;
+      background-color: #2a2a3d;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 20px;
+      text-decoration: none;
+      color: #fff;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .noticia:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    }
+
+    .noticia img {
+      width: 200px;
+      height: 130px;
+      object-fit: cover;
+    }
+
+    .noticia-content {
+      padding: 15px;
+      flex: 1;
+    }
+
+    .noticia-content h3 {
+      margin: 0 0 10px;
+      font-size: 18px;
+      color: #fff;
+    }
+
+    .noticia-content p {
+      margin: 0;
+      color: #ccc;
+      font-size: 14px;
+    }
+
+    footer {
+      background-color: #121222;
+      text-align: center;
+      padding: 15px 0;
+      color: #ccc;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🎮 GameZone</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="noticias.html" class="active">+Notícias</a></li>
+        <li><a href="jogos.html">Jogos</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="gamezone_trailers.html">Trailers</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <a href="#" class="noticia">
+      <img src="img/black-myth.jpg" alt="Black Myth Wukong">
+      <div class="noticia-content">
+        <h3>Black Myth: Wukong terá dublagem em português e lançamento confirmado</h3>
+        <p>A aguardada aventura inspirada em lendas chinesas será lançada em agosto para PC e consoles.</p>
+      </div>
+    </a>
+
+    <a href="#" class="noticia">
+      <img src="img/astro-bot.jpg" alt="Astro Bot">
+      <div class="noticia-content">
+        <h3>Astro Bot retorna com novo jogo para PlayStation 5</h3>
+        <p>Astro Bot promete diversão e nostalgia com novas mecânicas e mundos vibrantes.</p>
+      </div>
+    </a>
+
+    <a href="#" class="noticia">
+      <img src="img/silent-hill.jpg" alt="Silent Hill 2 Remake">
+      <div class="noticia-content">
+        <h3>Silent Hill 2 Remake ganha trailer sombrio e data de lançamento</h3>
+        <p>O clássico de terror psicológico chega aos jogadores ainda este ano com gráficos de última geração.</p>
+      </div>
+    </a>
+
+    <a href="#" class="noticia">
+      <img src="img/gta6.jpg" alt="GTA 6">
+      <div class="noticia-content">
+        <h3>GTA VI: Rockstar divulga novas imagens e detalhes sobre Vice City</h3>
+        <p>Fãs aguardam ansiosamente o lançamento do próximo grande título da Rockstar.</p>
+      </div>
+    </a>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 GameZone. Todos os direitos reservados a Mauricio Junior T.</p>
+  </footer>
+</body>
+</html>

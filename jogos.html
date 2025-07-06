@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Catálogo com os jogos mais populares do momento.">
+  <meta name="keywords" content="elden ring, hogwarts legacy, death stranding 2, fortnite">
+  <meta name="author" content="Mauricio Junior">
+  <title>GameZone - Jogos</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body {
+      background-color: #1e1e2f;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #121222;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      color: #fff;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 10px 0 0 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav ul li a.active, nav ul li a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      padding: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      font-size: 24px;
+      display: flex;
+      align-items: center;
+    }
+
+    h2::before {
+      content: '\1F3AE';
+      margin-right: 10px;
+    }
+
+    .jogos-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .jogo-card {
+      background-color: #2a2a3d;
+      border-radius: 12px;
+      padding: 15px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .jogo-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    }
+
+    .jogo-card img {
+      max-width: 100%;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    .jogo-card h3 {
+      margin: 10px 0 5px;
+      color: #fff;
+    }
+
+    .jogo-card p {
+      color: #ccc;
+      font-size: 14px;
+    }
+
+    footer {
+      background-color: #121222;
+      color: #ccc;
+      text-align: center;
+      padding: 15px 0;
+      margin-top: 40px;
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🎮 GameZone</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="noticias.html">+Notícias</a></li>
+        <li><a href="jogos.html" class="active">Jogos</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="gamezone_trailers.html">Trailers</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main class="container">
+    <h2>Jogos Populares</h2>
+    <section class="jogos-grid">
+      <div class="jogo-card">
+        <img src="img/eldenring.jpg" alt="Elden Ring">
+        <h3>Elden Ring</h3>
+        <p>Explore um mundo vasto repleto de desafios épicos.</p>
+      </div>
+      <div class="jogo-card">
+        <img src="img/hogwarts.jpg" alt="Hogwarts Legacy">
+        <h3>Hogwarts Legacy</h3>
+        <p>Viva sua própria aventura no universo de Harry Potter.</p>
+      </div>
+      <div class="jogo-card">
+        <img src="img/deathstranding2.jpg" alt="Death Stranding 2">
+        <h3>Death Stranding 2</h3>
+        <p>Embarque em uma jornada única no mundo apocalíptico de Kojima.</p>
+      </div>
+      <div class="jogo-card">
+        <img src="img/fortnite.jpg" alt="Fortnite">
+        <h3>Fortnite</h3>
+        <p>O battle royale mais jogado do mundo com eventos ao vivo.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 GameZone. Todos os direitos reservados a Mauricio Junior T.</p>
+  </footer>
+</body>
+</html>

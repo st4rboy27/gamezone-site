@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GameZone - Reviews</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body {
+      background-color: #1e1e2f;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #121222;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      color: #fff;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 10px 0 0 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav ul li a.active, nav ul li a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      padding: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      font-size: 24px;
+      display: flex;
+      align-items: center;
+    }
+
+    h2::before {
+      content: '\1F3AE';
+      margin-right: 10px;
+    }
+
+    .reviews-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .review-card {
+      background-color: #2a2a3d;
+      border-radius: 12px;
+      display: flex;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .review-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    }
+
+    .review-card img {
+      width: 220px;
+      object-fit: cover;
+    }
+
+    .review-content {
+      padding: 15px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .review-content h3 {
+      margin-top: 0;
+      color: #fff;
+    }
+
+    .review-content p {
+      color: #ccc;
+      font-size: 14px;
+    }
+
+    footer {
+      background-color: #121222;
+      color: #ccc;
+      text-align: center;
+      padding: 15px 0;
+      margin-top: 40px;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.8);
+    }
+
+    .modal-content {
+      background-color: #2a2a3d;
+      margin: 10% auto;
+      padding: 20px;
+      border-radius: 12px;
+      width: 80%;
+      max-width: 600px;
+      color: #fff;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.8);
+    }
+
+    .modal-content h3 {
+      margin-top: 0;
+    }
+
+    .close-btn {
+      color: #fff;
+      float: right;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    .close-btn:hover {
+      color: #ff4c4c;
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🎮 GameZone</h1>
+   <nav>
+  <ul>
+    <li><a href="index.html">Início</a></li>
+    <li><a href="noticias.html">+Notícias</a></li>
+    <li><a href="jogos.html">Jogos</a></li>
+    <li><a href="reviews.html" class="active">Reviews</a></li>
+    <li><a href="gamezone_trailers.html">Trailers</a></li>
+    <li><a href="contato.html">Contato</a></li>
+  </ul>
+</nav>
+  </header>
+
+  <main class="container">
+    <h2>Reviews de Jogos</h2>
+
+    <section class="reviews-grid">
+
+      <div class="review-card" onclick="openModal('inzoi')">
+        <img src="img/inzoi.png.jpg" alt="inZOI">
+        <div class="review-content">
+          <h3>inZOI - Uma Nova Experiência de Simulação</h3>
+          <p>Explore a cidade com gráficos realistas e uma jogabilidade imersiva que promete reinventar o gênero de simulação.</p>
+        </div>
+      </div>
+
+      <div class="review-card" onclick="openModal('split')">
+        <img src="img/splitfiction.png.jpg" alt="Split Fiction">
+        <div class="review-content">
+          <h3>Split Fiction - Aventura e Escolhas Impactantes</h3>
+          <p>Split Fiction oferece uma narrativa interativa onde cada decisão transforma o rumo da história.</p>
+        </div>
+      </div>
+
+      <div class="review-card" onclick="openModal('assassins')">
+        <img src="img/assassin's creed shadows.png.jpg" alt="Assassin's Creed Shadows">
+        <div class="review-content">
+          <h3>Assassin's Creed Shadows - Japão Feudal em Alta Definição</h3>
+          <p>Viaje para o Japão feudal e descubra combates intensos e visuais impressionantes na saga Assassin’s Creed.</p>
+        </div>
+      </div>
+
+      <div class="review-card" onclick="openModal('doom')">
+        <img src="img/doomdarkages.png.jpg" alt="Doom: The Dark Ages">
+        <div class="review-content">
+          <h3>Doom: The Dark Ages - Brutalidade Medieval</h3>
+          <p>Enfrente criaturas monstruosas em batalhas épicas com ambientação medieval e ação frenética.</p>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  <!-- Modais -->
+
+  <div id="modal-inzoi" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal('inzoi')">&times;</span>
+      <h3>inZOI - Review Completa</h3>
+      <p>inZOI redefine o gênero de simulação ao permitir que os jogadores criem e vivam em uma cidade ultrarrealista com liberdade quase total. Com gráficos impressionantes e sistemas complexos de interação, cada escolha impacta a experiência.</p>
+    </div>
+  </div>
+
+  <div id="modal-split" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal('split')">&times;</span>
+      <h3>Split Fiction - Review Completa</h3>
+      <p>Split Fiction mergulha o jogador em uma narrativa não-linear onde cada decisão afeta o destino de vários personagens. Com gráficos cinematográficos e escolhas morais profundas, o jogo proporciona uma experiência inesquecível.</p>
+    </div>
+  </div>
+
+  <div id="modal-assassins" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal('assassins')">&times;</span>
+      <h3>Assassin's Creed Shadows - Review Completa</h3>
+      <p>Explore o Japão feudal com combates emocionantes e um mundo aberto vasto e detalhado. Assassin’s Creed Shadows traz o melhor da saga com gráficos de nova geração e uma história envolvente.</p>
+    </div>
+  </div>
+
+  <div id="modal-doom" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal('doom')">&times;</span>
+      <h3>Doom: The Dark Ages - Review Completa</h3>
+      <p>Doom retorna com uma nova roupagem medieval, mantendo toda a brutalidade e adrenalina que consagraram a franquia. Gráficos de tirar o fôlego e batalhas épicas aguardam os fãs.</p>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 GameZone. Todos os direitos reservados a Mauricio Junior T.</p>
+  </footer>
+
+  <script>
+    function openModal(id) {
+      document.getElementById('modal-' + id).style.display = 'block';
+    }
+
+    function closeModal(id) {
+      document.getElementById('modal-' + id).style.display = 'none';
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Fale conosco - GameZone">
+  <meta name="keywords" content="contato, suporte, email, mensagem, GameZone">
+  <meta name="author" content="Mauricio Junior">
+  <title>GameZone - Contato</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body {
+      background-color: #1e1e2f;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      margin: 0;
+    }
+
+    header {
+      background-color: #121222;
+      padding: 20px 0;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    }
+
+    header h1 {
+      margin: 0;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      margin: 15px 0 0;
+      padding: 0;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav ul li a.active, nav ul li a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: #2a2a3d;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    form label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+      color: #fff;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      border-radius: 8px;
+      border: none;
+      margin-bottom: 15px;
+      background-color: #1e1e2f;
+      color: #fff;
+    }
+
+    form button {
+      background-color: #5a4fcf;
+      color: #fff;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      width: 100%;
+      font-weight: bold;
+    }
+
+    form button:hover {
+      background-color: #4a3fd0;
+    }
+
+    footer {
+      background-color: #121222;
+      text-align: center;
+      padding: 15px;
+      color: #ccc;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🎮 GameZone</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="noticias.html">+Notícias</a></li>
+        <li><a href="jogos.html">Jogos</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="gamezone_trailers.html">Trailers</a></li>
+        <li><a href="contato.html" class="active">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h2>📨 Fale Conosco</h2>
+    <form id="form-contato">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="mensagem">Mensagem:</label>
+      <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+
+      <button type="submit">Enviar Mensagem</button>
+    </form>
+  </main>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('#form-contato').on('submit', function(e) {
+        e.preventDefault();
+
+        const nome = $('#nome').val().trim();
+        const email = $('#email').val().trim();
+        const mensagem = $('#mensagem').val().trim();
+
+        if (!nome || !email || !mensagem) {
+          alert('Por favor, preencha todos os campos.');
+          return;
+        }
+
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+          alert('Por favor, insira um e-mail válido.');
+          return;
+        }
+
+        alert('Mensagem enviada com sucesso!');
+        $(this)[0].reset();
+      });
+    });
+  </script>
+
+  <footer>
+    <p>&copy; 2025 GameZone. Todos os direitos reservados a Mauricio Junior T.</p>
+  </footer>
+</body>
+</html>

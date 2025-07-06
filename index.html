@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="GameZone - As últimas notícias do mundo gamer">
+  <meta name="keywords" content="games, notícias, lançamentos, reviews">
+  <meta name="author" content="Mauricio Junior">
+  <title>GameZone - Início</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body {
+      margin: 0;
+      background-color: #1e1e2f;
+      color: #fff;
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      background-color: #121222;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    }
+
+    header h1 {
+      margin: 0;
+      color: #fff;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 15px 0 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav ul li a.active, nav ul li a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .noticia {
+      display: flex;
+      background-color: #2a2a3d;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 20px;
+      text-decoration: none;
+      color: #fff;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .noticia:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    }
+
+    .noticia img {
+      width: 200px;
+      height: 130px;
+      object-fit: cover;
+    }
+
+    .noticia-content {
+      padding: 15px;
+      flex: 1;
+    }
+
+    .noticia-content h3 {
+      margin: 0 0 10px;
+      font-size: 18px;
+      color: #fff;
+    }
+
+    .noticia-content p {
+      margin: 0;
+      color: #ccc;
+      font-size: 14px;
+    }
+
+    footer {
+      background-color: #121222;
+      text-align: center;
+      padding: 15px 0;
+      color: #ccc;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🎮 GameZone</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="active">Início</a></li>
+        <li><a href="noticias.html">+Notícias</a></li>
+        <li><a href="jogos.html">Jogos</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="gamezone_trailers.html">Trailers</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <a href="#" class="noticia">
+      <img src="img/doom.jpg" alt="Doom">
+      <div class="noticia-content">
+        <h3>Doom: The Dark Ages ganha novo trailer sombrio</h3>
+        <p>Com ambientação medieval e combates brutais, Doom: The Dark Ages promete ação frenética e desafios épicos.</p>
+      </div>
+    </a>
+
+    <a href="#" class="noticia">
+      <img src="img/Donkey-Kong-Bananza-Switch-2.jpg" alt="Donkey Kong">
+      <div class="noticia-content">
+        <h3>Donkey Kong Bananza ganha novo trailer para Switch 2</h3>
+        <p>Lançamento previsto para este mês no novo console da Nintendo.</p>
+      </div>
+    </a>
+
+    <a href="#" class="noticia">
+      <img src="img/helldivers 2.png" alt="Helldivers 2">
+      <div class="noticia-content">
+        <h3>Helldivers 2 vai ganhar versão para Xbox em agosto</h3>
+        <p>O aclamado jogo cooperativo expande sua base de jogadores com suporte a múltiplas plataformas.</p>
+      </div>
+    </a>
+
+    <a href="#" class="noticia">
+      <img src="img/presidente zenimax.jpg" alt="Zenimax">
+      <div class="noticia-content">
+        <h3>Presidente da Zenimax anuncia saída após demissões na Microsoft</h3>
+        <p>Mais um impacto das recentes mudanças e cortes nos estúdios do Xbox.</p>
+      </div>
+    </a>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 GameZone. Todos os direitos reservados a Mauricio Junior T.</p>
+  </footer>
+
+</body>
+</html>
