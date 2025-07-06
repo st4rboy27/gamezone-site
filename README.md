@@ -27,7 +27,7 @@ Tecnologias Utilizadas:
 - Vercel (hospedagem online)
 
 Como Acessar:
-1. Acesse: https://gamezone.vercel.app
+1. Acesse:(https://vercel.com/st4rboy27s-projects/gamezone-site)
 2. Ou abra o arquivo index.html localmente no navegador.
 
 Desenvolvido por:
